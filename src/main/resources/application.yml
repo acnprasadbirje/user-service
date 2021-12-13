@@ -1,0 +1,18 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: USER-SERVICE
+  zipkin:
+    base-url: ${ZIPKIN_SERVER_ADDRESS}
+
+eureka:
+  instance:
+    preferIpAddress: true
+    hostname: eureka-0
+  client: 
+    registerWithEureka: true
+    fetchRegisgtry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER_ADDRESS}
